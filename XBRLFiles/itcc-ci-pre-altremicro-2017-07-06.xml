@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Version 2017-05-04 17:46:04 -->
+<linkbase xmlns="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <roleRef xlink:type="simple" xlink:href="itcc-ci-roles-2017-07-06.xsd#AltreInformazioniMicro" roleURI="http://www.infocamere.it/itnn/fr/itcc/role/AltreInformazioniMicro"/>
+  <presentationLink xlink:type="extended" xlink:role="http://www.infocamere.it/itnn/fr/itcc/role/AltreInformazioniMicro">
+    <loc xlink:type="locator" xlink:href="itcc-ci-2017-07-06.xsd#itcc-ci_BilancioMicroAltreInformazioni" xlink:label="itcc-ci_BilancioMicroAltreInformazioni"/>
+    <loc xlink:type="locator" xlink:href="itcc-ci-2017-07-06.xsd#itcc-ci_IntroduzioneBilancioMicroAltreInformazioni" xlink:label="itcc-ci_IntroduzioneBilancioMicroAltreInformazioni"/>
+    <presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="itcc-ci_BilancioMicroAltreInformazioni" xlink:to="itcc-ci_IntroduzioneBilancioMicroAltreInformazioni" order="1" priority="0" use="optional"/>
+    <loc xlink:type="locator" xlink:href="itcc-ci-2017-07-06.xsd#itcc-ci_InformazioniAgliArtt25132545-sexiesCodiceCivile" xlink:label="itcc-ci_InformazioniAgliArtt25132545-sexiesCodiceCivile"/>
+    <presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="itcc-ci_BilancioMicroAltreInformazioni" xlink:to="itcc-ci_InformazioniAgliArtt25132545-sexiesCodiceCivile" order="2" priority="0" use="optional"/>
+    <loc xlink:type="locator" xlink:href="itcc-ci-2017-07-06.xsd#itcc-ci_CommentoInformazioniAgliArtt25132545-sexiesCodiceCivile" xlink:label="itcc-ci_CommentoInformazioniAgliArtt25132545-sexiesCodiceCivile"/>
+    <presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="itcc-ci_InformazioniAgliArtt25132545-sexiesCodiceCivile" xlink:to="itcc-ci_CommentoInformazioniAgliArtt25132545-sexiesCodiceCivile" order="1" priority="0" use="optional"/>
+    <loc xlink:type="locator" xlink:href="itcc-ci-2017-07-06.xsd#itcc-ci_InformazioniRichiesteLeggeMeritoStartupPMIInnovative" xlink:label="itcc-ci_InformazioniRichiesteLeggeMeritoStartupPMIInnovative"/>
+    <presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="itcc-ci_BilancioMicroAltreInformazioni" xlink:to="itcc-ci_InformazioniRichiesteLeggeMeritoStartupPMIInnovative" order="3" priority="0" use="optional"/>
+    <loc xlink:type="locator" xlink:href="itcc-ci-2017-07-06.xsd#itcc-ci_CommentoInformazioniRichiesteLeggeMeritoStartupPMIInnovative" xlink:label="itcc-ci_CommentoInformazioniRichiesteLeggeMeritoStartupPMIInnovative"/>
+    <presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="itcc-ci_InformazioniRichiesteLeggeMeritoStartupPMIInnovative" xlink:to="itcc-ci_CommentoInformazioniRichiesteLeggeMeritoStartupPMIInnovative" order="1" priority="0" use="optional"/>
+    <loc xlink:type="locator" xlink:href="itcc-ci-2017-07-06.xsd#itcc-ci_CommentoBilancioMicroAltreInformazioni" xlink:label="itcc-ci_CommentoBilancioMicroAltreInformazioni"/>
+    <presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="itcc-ci_BilancioMicroAltreInformazioni" xlink:to="itcc-ci_CommentoBilancioMicroAltreInformazioni" order="4" priority="0" use="optional"/>
+  </presentationLink>
+</linkbase>

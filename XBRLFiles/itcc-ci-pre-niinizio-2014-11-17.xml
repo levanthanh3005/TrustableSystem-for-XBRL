@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Version 2015-02-05 17:55:08 -->
+<linkbase xmlns="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <roleRef xlink:type="simple" xlink:href="itcc-ci-roles-2014-11-17.xsd#NotaIntegrativaParteIniziale" roleURI="http://www.infocamere.it/itnn/fr/itcc/role/NotaIntegrativaParteIniziale"/>
+  <presentationLink xlink:type="extended" xlink:role="http://www.infocamere.it/itnn/fr/itcc/role/NotaIntegrativaParteIniziale">
+    <loc xlink:type="locator" xlink:href="itcc-ci-2014-11-17.xsd#itcc-ci_NotaIntegrativaParteIniziale" xlink:label="itcc-ci_NotaIntegrativaParteIniziale"/>
+    <loc xlink:type="locator" xlink:href="itcc-ci-2014-11-17.xsd#itcc-ci_IntroduzioneNotaIntegrativa" xlink:label="itcc-ci_IntroduzioneNotaIntegrativa"/>
+    <presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="itcc-ci_NotaIntegrativaParteIniziale" xlink:to="itcc-ci_IntroduzioneNotaIntegrativa" order="1" priority="0" use="optional"/>
+  </presentationLink>
+</linkbase>

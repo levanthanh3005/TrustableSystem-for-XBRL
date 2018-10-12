@@ -1,0 +1,68 @@
+class entity ( 
+	identifier:string, 
+	identifierscheme:string 
+).
+class context (
+	id : string,
+	entity:entity, 
+	period:period 
+).
+class period (
+	starting:date, 
+	ending:date 
+).
+class date (
+	day : integer,
+	month : integer,
+	year : integer
+).
+class concept (
+	id : string,
+	name : string,
+	namespaceprefix : string,
+	namespaceuri : string
+).
+class fact (
+	concept : concept,
+	context : context,
+	value : integer,
+	unit : unit
+).
+class unit (
+	id : string,
+	measure : string
+).
+class arc (
+	from : string,
+	to : string,
+	weight : integer,
+	use : string
+).
+entity1 : entity (identifier : "SAMP" , identifierscheme : "http://www.SampleCompany.com").
+date1 : date (day : 31, month : 12, year : 2007).
+date2 : date (day : 31, month : 12, year : 2006).
+period1 : period (starting : date1, ending : date1 ).
+period2 : period (starting : date2, ending : date2 ).
+contextI2007 : context (id : "I-2007", entity : entity1, period : period1).
+contextI2006 : context (id : "I-2006", entity : entity1, period : period2).
+unitMoney : unit (id : "U-Monetary", measure : "USD").
+
+conceptBuildingsNet : concept ( id : "pattern_BuildingsNet", name:"BuildingsNet", namespaceprefix :"ns_calculation", namespaceuri : "http://xbrls.org/2008/xbrls/metapattern/calculation" ).
+conceptBusinessSegmentAxis : concept ( id : "pattern_BusinessSegmentAxis", name:"BusinessSegmentAxis", namespaceprefix :"ns_calculation", namespaceuri : "http://xbrls.org/2008/xbrls/metapattern/calculation" ).
+conceptCompanyBusinessSegmentAMember : concept ( id : "pattern_CompanyBusinessSegmentAMember", name:"CompanyBusinessSegmentAMember", namespaceprefix :"ns_calculation", namespaceuri : "http://xbrls.org/2008/xbrls/metapattern/calculation" ).
+
+fact0 : fact (concept : conceptBuildingsNet, context : contextI2007 , value : 10, unit : unitMoney).
+fact1 : fact (concept : conceptBusinessSegmentAxis, context : contextI2007 , value : 3, unit : unitMoney).
+fact2 : fact (concept : conceptCompanyBusinessSegmentAMember, context : contextI2007 , value : 7, unit : unitMoney).
+
+arc1 : arc (from : "pattern_BuildingsNet", to : "pattern_BusinessSegmentAxis", weight : 1 , use : "optional").
+arc2 : arc (from : "pattern_BuildingsNet", to : "pattern_CompanyBusinessSegmentAMember", weight : 1, use : "optional").
+
+relation inArc(f:fact, a:arc).
+relation valid(f : fact).
+
+module(validate) {
+	valid (F) :-  F : fact(value : expectedResult) , expectedResult > 10.
+}
+
+

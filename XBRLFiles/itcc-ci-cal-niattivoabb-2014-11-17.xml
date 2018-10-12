@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Version 2015-02-05 17:56:40 -->
+<linkbase xmlns="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <roleRef xlink:type="simple" xlink:href="itcc-ci-roles-2014-11-17.xsd#NotaIntegrativaAttivoAbbreviato" roleURI="http://www.infocamere.it/itnn/fr/itcc/role/NotaIntegrativaAttivoAbbreviato"/>
+  <roleRef xlink:type="simple" xlink:href="itcc-ci-roles-2014-11-17.xsd#NotaIntegrativaAttivoAbbreviatoTotale" roleURI="http://www.infocamere.it/itnn/fr/itcc/role/NotaIntegrativaAttivoAbbreviatoTotale"/>
+  <roleRef xlink:type="simple" xlink:href="itcc-ci-roles-2014-11-17.xsd#NotaIntegrativaAttivoAbbreviatoAltro" roleURI="http://www.infocamere.it/itnn/fr/itcc/role/NotaIntegrativaAttivoAbbreviatoAltro"/>
+  <roleRef xlink:type="simple" xlink:href="itcc-ci-roles-2014-11-17.xsd#SommeImportiTupleNotaIntegrativaAttivoAbbreviato" roleURI="http://www.infocamere.it/itnn/fr/itcc/role/SommeImportiTupleNotaIntegrativaAttivoAbbreviato"/>
+  <calculationLink xlink:type="extended" xlink:role="http://www.infocamere.it/itnn/fr/itcc/role/NotaIntegrativaAttivoAbbreviato"/>
+  <calculationLink xlink:type="extended" xlink:role="http://www.infocamere.it/itnn/fr/itcc/role/NotaIntegrativaAttivoAbbreviatoTotale"/>
+  <calculationLink xlink:type="extended" xlink:role="http://www.infocamere.it/itnn/fr/itcc/role/NotaIntegrativaAttivoAbbreviatoAltro"/>
+  <calculationLink xlink:type="extended" xlink:role="http://www.infocamere.it/itnn/fr/itcc/role/SommeImportiTupleNotaIntegrativaAttivoAbbreviato">
+    <loc xlink:type="locator" xlink:href="itcc-ci-2014-11-17.xsd#itcc-ci_ImmobilizzazioniFinanziarieCreditiTotaleCrediti" xlink:label="itcc-ci_ImmobilizzazioniFinanziarieCreditiTotaleCrediti"/>
+    <loc xlink:type="locator" xlink:href="itcc-ci-2014-11-17.xsd#itcc-ci_TotaleCreditiImmobilizzatiCreditiImmobilizzatiAreaGeograficaAbbreviato" xlink:label="itcc-ci_TotaleCreditiImmobilizzatiCreditiImmobilizzatiAreaGeograficaAbbreviato"/>
+    <calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="itcc-ci_ImmobilizzazioniFinanziarieCreditiTotaleCrediti" xlink:to="itcc-ci_TotaleCreditiImmobilizzatiCreditiImmobilizzatiAreaGeograficaAbbreviato" order="1.0" weight="1" priority="0" use="optional"/>
+    <loc xlink:type="locator" xlink:href="itcc-ci-2014-11-17.xsd#itcc-ci_TotaleCrediti" xlink:label="itcc-ci_TotaleCrediti"/>
+    <loc xlink:type="locator" xlink:href="itcc-ci-2014-11-17.xsd#itcc-ci_TotaleCreditiIscrittiAttivoCircolanteCreditiIscrittiAttivoCircolanteAreaGeograficaAbbreviato" xlink:label="itcc-ci_TotaleCreditiIscrittiAttivoCircolanteCreditiIscrittiAttivoCircolanteAreaGeograficaAbbreviato"/>
+    <calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="itcc-ci_TotaleCrediti" xlink:to="itcc-ci_TotaleCreditiIscrittiAttivoCircolanteCreditiIscrittiAttivoCircolanteAreaGeograficaAbbreviato" order="1.0" weight="1" priority="0" use="optional"/>
+  </calculationLink>
+</linkbase>

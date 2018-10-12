@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Version 2011-01-04 09:33:06 -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:itcc-ci-rol="http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/roles" targetNamespace="http://www.infocamere.it/itnn/fr/itcc/ci/2011-01-04/roles" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <annotation>
+    <appinfo>
+      <link:roleType roleURI="http://www.infocamere.it/itnn/fr/itcc/role/InfoGenerali" id="InfoGenerali">
+        <link:definition>Informazioni generali sull'azienda</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.infocamere.it/itnn/fr/itcc/role/SpCodCivile" id="SpCodCivile">
+        <link:definition>Stato patrimoniale (schema civilistico)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.infocamere.it/itnn/fr/itcc/role/SPAbbreviata" id="SPAbbreviata">
+        <link:definition>Stato patrimoniale in forma abbreviata</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.infocamere.it/itnn/fr/itcc/role/SPAbbreviataSemplificata" id="SPAbbreviataSemplificata">
+        <link:definition>Stato patrimoniale in forma abbreviata semplificata</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.infocamere.it/itnn/fr/itcc/role/SPConsolidato" id="SPConsolidato">
+        <link:definition>Stato patrimoniale consolidato</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.infocamere.it/itnn/fr/itcc/role/ContiOrdine" id="ContiOrdine">
+        <link:definition>Conti d'ordine</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.infocamere.it/itnn/fr/itcc/role/CEValProduzioneCodCivile" id="CEValProduzioneCodCivile">
+        <link:definition>Conto economico a valore e costo della produzione (schema civilistico)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.infocamere.it/itnn/fr/itcc/role/CEAbbreviata" id="CEAbbreviata">
+        <link:definition>Conto Economico in forma abbreviata</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.infocamere.it/itnn/fr/itcc/role/CEConsolidato" id="CEConsolidato">
+        <link:definition>Conto economico consolidato</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.infocamere.it/itnn/fr/itcc/role/CEConsolidatoAltro" id="CEConsolidatoAltro">
+        <link:definition>Conto economico consolidato, altre relazioni</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd"/>
+</schema>

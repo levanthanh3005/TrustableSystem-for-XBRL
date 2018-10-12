@@ -1,0 +1,43 @@
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto;
+  //background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid aqua;
+  padding: 20px;
+  //font-size: 30px;
+  //text-align: center;
+  cursor:pointer;
+}
+
+.grid-item:hover { 
+	background: aqua; 
+}
+.accountBalance{
+  float: left;
+  padding-right:10px;
+  max-width : 130px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.accountAddress {
+  width : 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#addNewAccount {
+  text-align: center;
+  color:red;
+}
+.accountFullBalance{
+  padding-right:10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.divPassword, #divSender {
+	text-align: center
+}

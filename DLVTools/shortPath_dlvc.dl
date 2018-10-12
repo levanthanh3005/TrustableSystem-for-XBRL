@@ -1,0 +1,22 @@
+#include "math_R.dll"
+#include "ListAndSet.20100303.dll"
+
+tx("tx1","n1","n2",5).
+tx("tx2","n1","n3",2).
+tx("tx3","n2","n4",3).
+tx("tx4","n2","n5",2).
+tx("tx5","n3","n5",2).
+
+tx("tx6","n6","n7",2).
+tx("tx7","n7","n8",2).
+tx("tx8","n8","n6",2).
+
+%____QUERY
+path([TXID],N1,N2,V) :- tx(TXID,N1,N2,V).
+
+path([TXID2|[TXID1|L]],N1,N3,V2) :- path([TXID1|L],N1,N2,V1) ,tx(TXID2,N2,N3,V2),not #member(TXID2,[TXID1|L]), V1 >= V2.
+path([TXID2|[TXID1|L]],N1,N3,V1) :- path([TXID1|L],N1,N2,V1) ,tx(TXID2,N2,N3,V2),not #member(TXID2,[TXID1|L]), V1 < V2.
+
+total(NX,NY,V) :- path(_,NX,NY,_),#sum{VI,P : path(P,NX,NY,VI)} = V.
+
+%dl-complex.win.20110713.beta.exe -silent shortPath.dl -nofdcheck
